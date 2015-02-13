@@ -1,4 +1,7 @@
-<form role="form" action="{{ links.search }}" data-search="suggestion" class="search">
-    <button class="search-button right"></button>
-    <input type="search" placeholder="Buscar na loja" name="palavra_busca" data-input="suggestion" type="text">
-</form>
+<form class="search overflow limpar" name="buscaForm" method="get" data-search="suggestion" action="{{ links.search }}">
+    <input type="hidden" name="loja" value="{{ store.id }}" />
+    <button class="search-button right icon-search" type="submit" tabindex="1"></button>
+    <div class="overflow">
+        <input class="search-key" name="palavra_busca" id="search-key" value="O que deseja buscar?" tabindex="0" type="text" />
+    </div>
+</form><!-- .search -->

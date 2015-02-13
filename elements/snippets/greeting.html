@@ -1,0 +1,7 @@
+<div class="greeting">
+    {% if customer.logged %}
+        <span>Olá, seja bem vindo! Acesse seu <a href="{{ links.central }}">painel</a> ou faça <a href="{{ links.logout }}">logout</a></span>
+    {% else %}
+        <span>Olá, seja bem vindo! Faça seu <a href="{{ links.login }}">login</a> ou <a href="{{ links.register }}">cadastre-se</a></span>
+    {% endif %}
+</div>

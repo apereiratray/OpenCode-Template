@@ -1,17 +1,8 @@
 <ul>
-    {% if customer.logged %}
     <li>
-    	<strong>Olá {{ customer.name }}</strong>
+        <a href="{{ links.central }}">Central</a>
     </li>
     <li>
-    	<a href="{{ links.logout }}">Logout</a>
+        <a href="{{ links.orders }}">Meus pedidos</a>
     </li>
-    {% else %}
-    <li>
-    	<a href="{{ links.login }}">Login</a>
-    </li>
-    <li>
-    	<a href="{{ links.register }}">Crie sua conta</a>
-    </li>
-    {% endif %}
 </ul>
