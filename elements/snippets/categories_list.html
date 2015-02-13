@@ -1,0 +1,35 @@
+<nav  class="menu">
+	<ul class="level1 inline-block center">
+	    {% for level1 in categories %}
+	        {% if loop.index <= limit or not limit %}
+	            <li class="item-level1">
+	            	<h3>
+	            		<a href="{{ level1.link }}" class="link-level1">{{ level1.name }}</a>
+	            	</h3>
+	            	{% if level1.children > 0 %}
+	            	<ul class="level2">
+	            		{% for level2 in level1.children %}
+	            			<li class="item-level2">
+	            				<h4>
+	            					<a href="{{ level2.link }}" class="link-level2">{{ level2.name }}</a>
+	            				</h4>
+	            				{% if level2.children > 0 %}
+				            	<ul class="level3">
+				            		{% for level3 in level2.children %}
+				            			<li class="item-level3">
+				            				<h4>
+				            					<a href="{{ level3.link }}" class="link-level3">{{ level3.name }}</a>
+				            				</h4>
+				            			</li>
+				            		{% endfor %}
+				            	</ul>
+				            	{% endif %}
+	            			</li>
+	            		{% endfor %}
+	            	</ul>
+	            	{% endif %}
+	            </li>
+	        {% endif %}
+	    {% endfor %}
+	</ul>
+</nav>

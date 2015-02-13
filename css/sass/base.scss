@@ -1,0 +1,60 @@
+/**
+ * Base/Settings
+ */
+
+$color1: #000;
+$font1: sans-serif;
+
+body{
+    background: #fff url('../img/pattern.png') repeat-x center top;
+}
+
+html > object{
+    display: none;
+}
+
+a:link,
+a:visited,
+.visitados_produtos .clearVisiteds,
+.visitados .myNavigation{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.btn-proxima-pagina,
+.btn-pagina-anterior{
+    margin: 0 20px;
+}
+
+.filtros{
+    margin-left: 20px;
+}
+
+.icon-breadcrumb:before {
+    content: '/';
+}
+
+#NavLogoTray{
+    background: #ccc;
+    display: block;
+    height: 20px;
+    overflow: hidden;
+}
+
+.page-home #Page{
+    padding: 0;
+}
+
+// Transition
+.transition{
+    -webkit-transition: 150ms all linear 0s;
+       -moz-transition: 150ms all linear 0s;
+         -o-transition: 150ms all linear 0s;
+            transition: 150ms all linear 0s;
+}
+
+// Font Icons

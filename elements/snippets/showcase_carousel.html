@@ -1,0 +1,15 @@
+<div class="showcase">
+    {% if products|length > 0 %}
+
+        <div class="carousel">
+            <ul>
+                {% for product in products %}
+                    <li class="product transition">
+                        {{ _view.element('snippets/product', {"product": product}) }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    {% endif %}
+</div>

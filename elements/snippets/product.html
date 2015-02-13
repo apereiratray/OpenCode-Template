@@ -1,0 +1,63 @@
+<a href="{{ product.link }}" class="{{ not product.available ? 'out' : '' }}">
+    <div class="product-image">
+        {% set loading = tray.paths.system_image ~ "/loading.gif" %}
+        <img class="img-responsive lazy" data-original="{{ product.images[0].large }}" src="{{ loading }}" alt="{{ product.name }}">
+    </div>
+    <div class="product-name">
+        <h3>{{ product.name }}</h3>
+    </div>
+    <div class="product-price">
+        {% set price = product.price_offer > 0 ? product.price_offer : product.price %}
+        {% set promotion = (product.price_offer|replace({',': '.'})  > 0) %}
+
+        {% if promotion %}
+            <div class="price">
+                {{- Translation('de') -}}: <abbr class="currency" title="BRL"> {{- settings.currency -}} </abbr> {{- product.price -}}
+            </div>
+        {% endif %}
+
+        <span class="price-off"><abbr class="currency" title="BRL"> {{- settings.currency -}} </abbr> {{ price }}</span>
+    </div>
+
+    <div class="product-payment">
+        {{ product.payment }}
+    </div> 
+
+    <ul class="product-buttons">
+        {% if not product.available %}
+            <li class="out">indisponível</li>
+        {% else %}
+            <li class="tags">
+                <ul class="inline-block">
+                    {% if promotion %}
+                    <li class="sale">
+                        <span class="transition">Promoção</span>
+                        <img src="{{ themePath }}img/buttons/sale.png?{{ utils.assets_version }}" alt="Promoção">
+                    </li>
+                    {% endif %}
+
+                    {% if product.new %}
+                    <li class="release">
+                        <span class="transition">Lançamento</span>
+                        <img src="{{ themePath }}img/buttons/release.png?{{ utils.assets_version }}" alt="Lançamento">
+                    </li>
+                    {% endif %}
+                    
+                    {% if product.featured %}
+                    <li class="feature">
+                        <span class="transition">Destaque</span>
+                        <img src="{{ themePath }}img/buttons/feature.png?{{ utils.assets_version }}" alt="Destaque">
+                    </li>
+                    {% endif %}
+                    
+                    {% if product.free_shipping %}
+                    <li class="shipping">
+                        <span class="transition">Frete Grátis</span>
+                        <img src="{{ themePath }}img/buttons/shipping.png?{{ utils.assets_version }}" alt="Frete Grátis">
+                    </li>
+                    {% endif %}
+                </ul>
+            </li>
+        {% endif %}
+    </ul>
+</a>

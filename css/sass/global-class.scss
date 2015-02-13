@@ -1,0 +1,257 @@
+/* ==========================================================================
+   Global classes
+   ========================================================================== */
+
+/* Limpando flutuações */
+.clear{
+    clear: both;
+}
+
+.clear-right{
+    clear: right;
+}
+
+.clear-left{
+    clear: left;
+}
+
+/* Image Replacement */
+.hide-text{
+    display: block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+   
+/* Overflow */
+.overflow{
+    display: block;
+    overflow: hidden;
+}
+
+.overflow-v{
+    overflow: visible;
+}
+
+.overflow-x{
+    overflow-x: hidden;
+}
+
+.overflow-y{
+    overflow-y: hidden;
+}
+
+/* Float */
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.no-float{
+    float: none!important;
+}
+
+/* Largura e Altura */
+.w-auto{
+    width: auto;
+}
+
+.w-full{
+    width: 100%;
+}
+
+.h-auto{
+    height: auto;
+}
+
+.h-full{
+    height: 100%;
+}
+
+/* Controlando Opacidade e Transparencia */
+.transparent{
+    opacity: 0;
+}
+
+.transparent-25{
+    opacity: .25;
+}
+
+.transparent-50{
+    opacity: .5;
+}
+
+.transparent-75{
+    opacity: .75;
+}
+
+/* Posicionamento */
+.p-absolute{
+    position: absolute;
+}
+
+.p-relative{
+    position: relative;
+}
+
+.p-fixed{
+    position: fixed;
+}
+
+.p-inherit{
+    position: inherit;
+}
+
+/* Ocultando elementos */
+.hidden{
+    display: none;
+    visibility: hidden;
+}
+
+.hidden-text{
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+.no-font{
+    font-size: 0;
+}
+
+.no-margin{
+    margin: 0;
+}
+
+.no-margin-left{
+    margin-left: 0;
+}
+
+.no-margin-right{
+    margin-right: 0;
+}
+
+.toggle-element{
+    opacity: 0;
+    visibility: hidden;
+}
+
+    .toggle-parent:hover .toggle-element{
+        opacity: 1;
+        visibility: visible;
+    }
+
+/* Centralizando elementos */
+.center{
+    margin: 0 auto;
+    width: 1001px;
+}
+
+/* Alinhando elementos horizontalmente */
+.inline-block{
+    font-size: 0;
+}
+
+    .inline-block > *{
+        display: inline-block;
+        vertical-align: top;
+        font-size: 11px;
+    }
+
+/* Tratamento tipografico e textual */
+.t-right{
+    text-align: right;
+}
+
+.t-left{
+    text-align: left;
+}
+
+.t-center{
+    text-align: center;
+}
+
+.t-justify{
+    text-align: justify;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.lowercase{
+    text-transform: lowercase;
+}
+
+.capitalize{
+    text-transform: capitalize;
+}
+
+.transform-none{
+    text-transform: none;
+}
+
+.w-break-all{
+    word-break: break-all;
+}
+
+.no-w-break{
+    word-break: normal;
+}
+
+.w-space-nowrap{
+    white-space: nowrap;
+}
+
+.w-space-pre{
+    white-space: pre;
+}
+
+.w-space-pre-line{
+    white-space: pre-line;
+}
+
+.w-space-pre-wrap{
+    white-space: pre-wrap;
+}
+
+/* Cursor Mouse */
+.c-pointer{
+    cursor: pointer;
+}
+
+.c-default{
+    cursor: default;
+}
+
+.c-crosshair{
+    cursor: crosshair;
+}
+
+.c-help{
+    cursor: help;
+}
+
+.c-wait{
+    cursor: wait;
+}
+
+.c-text{
+    cursor: text;
+}
+
+.c-progress{
+    cursor: progress;
+}
+
+/* Background */
+.no-bg{
+    background: none;
+}
+
+/* Imagens */
+.no-photo > img{
+    display: none;
+}

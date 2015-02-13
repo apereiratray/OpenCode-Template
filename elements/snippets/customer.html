@@ -1,0 +1,17 @@
+<ul>
+    {% if customer.logged %}
+    <li>
+    	<strong>Olá {{ customer.name }}</strong>
+    </li>
+    <li>
+    	<a href="{{ links.logout }}">Logout</a>
+    </li>
+    {% else %}
+    <li>
+    	<a href="{{ links.login }}">Login</a>
+    </li>
+    <li>
+    	<a href="{{ links.register }}">Crie sua conta</a>
+    </li>
+    {% endif %}
+</ul>

@@ -1,0 +1,34 @@
+<div class="showcase">
+    {% if products|length > 0 %}
+
+        <div class="product-list overflow">
+            <ul class="overflow">
+                {% for product in products %}
+
+                    <li class="product transition">
+                        {{ _view.element('snippets/product', {"product": product}) }}
+                    </li>
+
+                    {% if loop.index is divisible by(4) %}
+                        </ul><ul class="overflow">
+                    {% endif %}
+
+                    {% if loop.index == 8 and pages.current == 'home' %}                        
+                        <div class="wrap-banners overflow">
+                            <div class="banner banner-extra2 left">
+                                {{ banner.extra2 }}
+                            </div>
+                            <div class="banner banner-extra3 right">
+                                {{ banner.extra3 }}
+                            </div>
+                        </div>
+
+                        <ul class="overflow">
+                    {% endif %}
+
+                {% endfor %}
+            </ul>
+        </div>
+
+    {% endif %}
+</div>

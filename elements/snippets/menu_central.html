@@ -1,0 +1,40 @@
+<nav class="menu">
+    <ul class="level1">
+        <li class="item-level1">
+            <h4 class="link-level1">{{ Translation('pedidos') }}</h4>
+            <ul class="level2">
+                <li class="item-level2">
+                    <a class="link-level2" href="{{ links.orders }}">{{ Translation('central_anteriores') }}</a>
+                </li>
+                <li class="item-level2">
+                    <a class="link-level2" href="{{ links.payment_confirm }}">{{ Translation('confirma_pag') }}</a>
+                </li>
+                <li class="item-level2">
+                    <a class="link-level2" href="{{ links.orders_tracking }}">{{ Translation('rastrear_pedido') }}</a>
+                </li>
+                <li class="item-level2">
+                    <a class="link-level2" href="{{ links.orders_return }}">{{ Translation('central_troca_devolucao') }}</a>
+                </li>
+            </ul>
+        </li>
+        <li class="item-level1">
+            <h4 class="link-level1">{{ Translation('seu_cadastro') }}</h4>
+            <ul class="level2">
+                <li class="item-level2">
+                    <a class="link-level2" href="{{ links.account }}">{{ Translation('alterar_cadastro') }}</a>
+                </li>
+                <li class="item-level2">
+                    <a class="link-level2" href="{{ links.account_password }}">{{ Translation('central_alterar_senha') }}</a>
+                </li>
+            </ul>
+        </li>
+        <li class="item-level1">
+            <h4 class="link-level1">{{ Translation('atendimento') }}</h4>
+            <ul class="level2">
+                <li class="item-level2">
+                    <a class="link-level2" href="{{ links.contact }}">{{ Translation('fale_conosco') }}</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
