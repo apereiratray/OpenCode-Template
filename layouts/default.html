@@ -21,9 +21,16 @@
     {% if showHeader %}
         
         {{ _view.element('header') }}
+        
         {% if pages.current == 'home' and banner.home %}
             <div class="banner banner-home">
                 {{ banner.home }}
+            </div>
+        {% endif %}
+
+        {% if banner.extra1 %}
+            <div class="banner banner-extra1">
+                {{ banner.extra1 }}
             </div>
         {% endif %}
 
@@ -36,7 +43,7 @@
                 {{ _view.element('sidebar_left') }}
             {% endif %}
 
-            <section class="page-content" id="Page">
+            <section class="page-content overflow" id="Page">
                 {{ content_for_layout }}
             </section>
 
@@ -48,8 +55,10 @@
     </div>
     
     {% if showFooter %}
-        {{ _view.element('snippets/tagcloud') }}
-        {{ _view.element('snippets/history') }}
+        {% if not pages.current == 'home' %}
+            {{ _view.element('snippets/tagcloud') }}
+            {{ _view.element('snippets/history') }}
+        {% endif %}
 
         {% if banner.bottom %}
             <div class="banner banner-bottom">
@@ -74,7 +83,11 @@
     {% endif %}
 
     {{ googleTagManager.bottom(pages.current, tagManagerData) }}
-
+    
+    {% if pages.current == 'home' %}
+        <script type="text/javascript" src="https://images.tcdn.com.br/imggeral/loja/view/scripts/jquery.jcarousel.min.js?{{ utils.assets_version }}"></script>
+    {% endif %}
+    <script type="text/javascript" src="https://images.tcdn.com.br/img/arquivos/plugins/jquery.formComplete.js?{{ utils.assets_version }}"></script>
     <script type="text/javascript" src="{{ themePath }}js/theme.min.js?{{ utils.assets_version }}"></script>
 
     {{ html.script('dist/application.min.js?' ~ utils.assets_version) }}

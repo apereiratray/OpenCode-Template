@@ -1,3 +1,3 @@
-(function($){
-    $(".lazy").lazyload();
+;(function($){
+    // Plugins init here
 })(jQuery);

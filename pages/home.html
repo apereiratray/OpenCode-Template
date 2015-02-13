@@ -4,11 +4,14 @@
     </div>
 {% endif %}
 
-{% set products = Products({
-    'filter': 'featured'
-}) %}
+{% 
+	set products = Products({
+    	'filter': 'featured'
+	}) 
+%}
 
-{{ _view.element('snippets/showcase', {
-    "showcaseTitle": "Destaques",
-    "products": products
-}) }}
+{{ 
+	_view.element('snippets/showcase', {
+	    "products": products
+	}) 
+}}

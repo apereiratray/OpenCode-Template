@@ -1,14 +1,14 @@
-{{ _view.element('snippets/messages') }}
-
 <header class="header">
-    <div class="center">
-        <div class="">
-            <a class="brand" href="{{ links.home }}" title="{{ store.name }}">{{ store.name }}</a>
+    <div class="center overflow">
+        <div class="logo left">
+            <a href="{{ links.home }}" title="{{ store.name }}">
+                <img src="{{ themePath }}img/logo.png?{{ utils.assets_version }}" alt="{{ store.name }}">
+            </a>
         </div>
-        <div class="">
-            {{ _view.element('snippets/customer') }}
+        <div class="right">
+            {{ _view.element('snippets/cart') }}
         </div>
-        <div class="">
+        <div class="overflow">
             {{ _view.element('snippets/search') }}
         </div>
     </div>
