@@ -1,3 +1,5 @@
 ;(function($){
-    // Plugins init here
+    if( $.fn.formComplete ){
+		$('form.limpar').formComplete();
+	}
 })(jQuery);
